@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+@import url("https://use.typekit.net/oiq2zqq.css");
+
+:root {
+    --blue: #3A73F3;
+
+    /*
+    #3A73F3 blue
+    #f94c57 pink
+    */
+
+    --background: #090A0C;
+    --background_input: #13161a;
+    --box-shadow:rgba(0, 0, 0, 0.479);
+    --text: #ffffff;
+    --label: #ffffff;
+    --label-font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background);
+    color: white;
+    
+    font-family: 'Spectral', serif;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    transition: .1s;
+}
+input[type="submit"]:hover {
+    filter: brightness(1.2);
+}
+input[type="submit"]:active {
+    scale: .97;
+}
+
+div.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+div.container-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.build {
+    
+    width: 900px;
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 10px 10px 10px;
+    
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--blue);
+}
+header p {color: white;} /* make link white */
+
+div.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+header #header_signature {
+    font-size: 10px;
+    float: right;
+    color: var(--blue);
+}
+
+header #header_title {
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: -0.5px;
+}
+
+header #header_signature span {font-weight: normal; color: white;}
+
+header img {
+    max-height: 44px;
+}
+
+header .header-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+div.body-links-wrapper {
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-links-wrapper-left {
+    height: 1px;
+    width: 120px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--blue);
+    box-shadow: 0px 0px 3px var(--blue)
+}
+
+.body-links-wrapper-right {
+    height: 1px;
+    width: 120px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--blue);
+    box-shadow: 0px 0px 3px var(--blue);
+}
+
+.biography {
+    line-height: 21px;
+}
+
+div.build div.body-links {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.build img {
+    border-radius: 100%;
+    height: 150px;
+    transition: .2s;
+}
+
+div.build img:hover {
+    opacity: .7;
+    /*transform: scale(105%);*/
+}
+
+div.build svg {
+    scale: 1.1;
+    fill: white;
+    transition: .2s;
+}
+
+div.build svg:hover {
+    opacity: .7;
+}
+
+div.build {
+    text-align: left;
+}
+
+div.build p span {
+    color:rgba(255, 255, 255, 0.562);
+    font-weight: bold;
+}
+
+div.index {
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+div.index-entry {
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 7px 0px;
+    text-align: center;
+}
+
+div.index-entry:hover {
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+    transition: 0s;
+}
+
+div.separation-line {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+div.one {
+    width: 2px;
+    height: 0px;
+    border-bottom: 1px solid var(--blue);
+    margin-right: 10px;
+    box-shadow: 0px 0px 3px var(--blue)
+}
+
+div.two {
+    width: 400px;
+    height: 0px;
+    border-bottom: 1px solid var(--blue);
+    box-shadow: 0px 0px 3px var(--blue)
+}
+
+div.three {
+    width: 2px;
+    height: 0px;
+    border-bottom: 1px solid var(--blue);
+    margin-left: 10px;
+    box-shadow: 0px 0px 3px var(--blue)
+}
+
+div.anthelion {
+    display: flex;
+    justify-content: center;
+    margin-top: 41px;
+}
+
+div.anthelion #anthelion-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.40);
+    font-family: 'Libre Baskerville', serif;
+}
+
+div.anthelion #anthelion-signature {
+    font-size: 13px;
+    margin-top: -4px;
+    text-align: right;
+}
+
+div.anthelion #anthelion-signature span {
+    color: var(--blue);
+}
+
+footer {
+    width: 100%;
+    text-align:center;
+    font-size: 11px;
+    padding: 7px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.253);
+
+    position: absolute;
+    bottom: 0;
+}
+
+footer span {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .build {
+        width: 100%!important;
+        height: auto!important;
+        margin: 20px 0px;
+    }
+    div.body-links {
+        justify-content: space-around!important;
+    }
+    .body-links {
+        padding: 10px;
+        width: 100%!important;
+    }
+    .body-links-wrapper-left {display: none}
+    .body-links-wrapper-right {display: none}
+    .build p {
+        padding: 0px 10px;
+    }
+    .index {
+        grid-template-columns: 1fr 1fr 1fr 1fr!important;
+        padding: 0px 10px;
+    }
+    .inner-header {
+        width: 100%;
+        padding: 0px 0px!important;
+    }
+    .two {
+        width: 200px!important;
+    }
+    footer {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 660px) {
+    .index {
+        grid-template-columns: 1fr 1fr 1fr!important;
+    }
+}
+
+@media (max-width: 600px) {
+    div.body-links {
+        justify-content: space-between!important;
+    }
+}
+
+@media (max-width: 450px) {
+    .index {
+        grid-template-columns: 1fr 1fr!important;
+    }
+}

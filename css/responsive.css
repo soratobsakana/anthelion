@@ -1,0 +1,41 @@
+@media (max-width: 905px) {
+    header.inner-header {
+        width: 100%!important;
+        justify-content: space-between;
+        padding: 0px 20px!important;
+        position: static!important;
+    }
+
+    header.inner-header h3.header-signature {
+        position: static!important;
+        transform: none;
+    }
+
+    header.inner-header ul.header-menu {
+        position: static!important;
+        transform: none;
+    }
+    
+    header.inner-header ul.header-account {
+        position: static!important;
+        
+    }
+
+    section.build {
+        width: 100%!important;
+    }
+
+}
+
+@media (max-width: 680px) {
+    header.inner-header ul.header-menu {
+        display: none;
+    }
+    footer {
+        font-size: 9px!important;
+    }
+}
+
+@media (max-width: 500px) {
+    
+}

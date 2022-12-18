@@ -1,0 +1,32 @@
+.login {
+    margin: 20 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--background_input);
+    border: 1px solid gray;
+
+    margin-bottom: 10px!important;
+    margin-top: 3px!important;
+}
+
+input[type="submit"] {
+    color: rgb(235, 235, 235);
+}
+
+label {
+    font-size: var(--label-font-size);
+    color: var(--label);
+}
+
+h1 {
+    border-bottom: 1px solid var(--blue);
+    margin-bottom: 15px;
+}

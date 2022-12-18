@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+@import url("https://use.typekit.net/oiq2zqq.css");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --blue: #3A73F3;
+    --blue-hover: #3a72f3de;
+
+    /*
+    #3A73F3 blue
+    #f94c57 pink
+    */
+
+    --background: #090A0C;
+    --background_input: #13161a;
+    --box-shadow:rgba(0, 0, 0, 0.479);
+    --text: #ffffff;
+    --font: "inter";
+    --font-serif: "Libre Baskerville";
+    --label: #ffffff;
+    --label-font-size: 14px;
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input[type=submit] {
+    background-color: inherit;
+    border-radius: none;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.highlight {
+    color: var(--blue);
+}
+
+
+
+body {
+    background-color: var(--background);
+    color: white;
+    font-family: var(--font);
+    overflow-y: scroll; /* Content's position will be different on websites that have viewport's height overflow and that don't */
+}
+
+div.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+header.inner-header {
+    width: 900px;
+    height: 40px;
+    
+    margin: 5px auto 0;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header.inner-header h3.header-signature {
+    font-family: var(--font-serif);
+    letter-spacing: -1.2px;
+
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header.inner-header ul.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    line-height: 40px;
+    height: 100%;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header.inner-header ul.header-menu li {
+    padding: 0px 20px;
+    transition: .1s;
+}
+
+header.inner-header ul.header-menu:hover li{
+    opacity: 0.5;
+}
+header.inner-header ul.header-menu li:hover{
+    opacity: 1;
+}
+
+header.inner-header ul.header-account {
+    position: absolute;
+    right: 0%;
+    transform: translateX(-50%);
+}
+
+header.inner-header ul.header-account a i {
+    font-weight: bold;
+}
+
+
+section.build {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+section.build div.build-wrapper {
+    /* This only is used for the loggedout homepage. */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.build div.build-logo {
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: var(--font-serif);
+    font-size: 32px;
+    letter-spacing: -1.2px;
+
+    margin-top: -0px; /* reduces the header's 40px height, so this can look vertically centered */
+}
+
+section.build ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+section.build ul li input[type=submit] {
+    padding: 5px 15px;
+    background-color: var(--blue);
+    border-radius: 20px;
+
+    transition: .1s;
+}
+
+section.build ul li input[type=submit]:hover {
+    background-color: var(--blue-hover);
+}
+
+
+
+footer {
+    padding: 8px 10px;
+    word-wrap: wrap;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    font-family: var(--font-serif);
+    font-size: 10px;
+    
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.253);
+}
+
+footer span {
+    color: var(--blue);
+    font-weight: bold;
+}
