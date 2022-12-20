@@ -1,4 +1,4 @@
-<header>    
+<header class="header-wrapper">    
     <header class="inner-header">
         <h3 class="header-signature"><a href="/">Anthelion</a></h3>
         <ul class="header-menu">
@@ -12,11 +12,11 @@
             <?php
                 if (!isset($_SESSION["loggedin"])) {
                     ?>
-                    <a href="db/login"><i class="fas fa-user"></i></a>
+                    <a href="/db/login"><i class="fas fa-user"></i>Login</a>
                     <?php
                 } else {
                     ?>
-                    <li><a href="resources/profile"><i class="fas fa-user"></i>&nbsp;&nbsp;<?=$_SESSION['name']?></a></li>
+                    <li><a href="/resources/profile"><i class="fas fa-user"></i><span id="header-res"><?=$_SESSION['name']?></span></a></li>
                     <?php
                 }
             ?>

@@ -1,0 +1,118 @@
+section.profile-wrapper {
+    height: 100%;
+    width: 100%;
+
+    margin-top: 10px; /* Makes it a total of 30px */
+}
+
+div.profile-user_info {
+    display: flex;
+    gap: 15px;
+}
+
+div.profile-user_info-img {
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+
+    
+    overflow: hidden;
+}
+
+div.profile-user_info-img img {
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    word-break: break-word;
+    border-radius: 8px;
+}
+
+div.profile-user_info-data {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+div.profile-user_info-data-fr {
+    display: flex;
+}
+
+div.profile-user_info-data-fr h1 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+div.profile-user_info-data-sr {
+    height: 100%;
+    width: 100%;
+    position: relative; /* So the description can be at the bottom. */
+
+    font-size: 10px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+div.profile-user_info-data-sr ul{
+    display: flex;
+    gap: 5px;
+}
+
+div.profile-user_info-data-sr p {
+    /* Max. 240 chars. */
+    margin-top: 5px;
+    position: absolute;
+    bottom: 0;
+
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+div.profile-user_desc {
+    display: none;
+    padding: 10px 0px 0px;
+    font-size: 10px;
+}
+
+div.profile-separator {
+    height: 1px;
+    width: 75%;
+    background-color: var(--blue);
+    margin-top: 15px;
+    box-shadow: 0px 0px 8px var(--blue);
+}
+
+div.profile-user_sections {
+    padding: 20px 0;
+}
+
+div.profile-user_sections ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+div.profile-user_sections ul li {
+    border-radius: 8px;
+    padding: 7px 15px;
+    background-color: var(--background_input);
+    border: 1px solid var(--background_input_hover);
+    text-align: center;
+    transition: .3s;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+div.profile-user_sections ul li:hover {
+    transition: .05s;
+    background-color: var(--background_input_hover);
+}
+
+div.profile-user_sections ul li.profile-user_sections-create-entry {
+    background-color: transparent;
+}

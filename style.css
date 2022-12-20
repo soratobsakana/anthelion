@@ -17,6 +17,7 @@
 
     --background: #090A0C;
     --background_input: #13161a;
+    --background_input_hover: #1b1f25;
     --box-shadow:rgba(0, 0, 0, 0.479);
     --text: #ffffff;
     --font: "inter";
@@ -65,20 +66,30 @@ div.container {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
 
+header.header-wrapper {
+    border-bottom: 1px solid var(--background_input_hover);
+    background-color: var(--background_input);
+    min-width: 100%;
+}
 
 header.inner-header {
     width: 900px;
     height: 40px;
     
-    margin: 5px auto 0;
+    margin: 2.5px auto;
 
     display: flex;
     align-items: center;
     position: relative;
+}
+
+header.inner-header i {
+    margin-right: 5.5px;
 }
 
 header.inner-header h3.header-signature {
@@ -102,6 +113,8 @@ header.inner-header ul.header-menu {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+
+    display: none; /* Won't be using this for now */
 }
 
 header.inner-header ul.header-menu li {
@@ -119,7 +132,6 @@ header.inner-header ul.header-menu li:hover{
 header.inner-header ul.header-account {
     position: absolute;
     right: 0%;
-    transform: translateX(-50%);
 }
 
 header.inner-header ul.header-account a i {
@@ -130,8 +142,7 @@ header.inner-header ul.header-account a i {
 section.build {
     width: 900px;
     height: 100%;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0px;
 
     word-wrap: break-word;
     hyphens: auto;
@@ -152,17 +163,15 @@ section.build div.build-logo {
     font-family: var(--font-serif);
     font-size: 32px;
     letter-spacing: -1.2px;
-
-    margin-top: -0px; /* reduces the header's 40px height, so this can look vertically centered */
 }
 
-section.build ul {
+section.build ul.loggedoff {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-section.build ul li input[type=submit] {
+section.build ul.loggedoff li input[type=submit] {
     padding: 5px 15px;
     background-color: var(--blue);
     border-radius: 20px;
@@ -170,13 +179,14 @@ section.build ul li input[type=submit] {
     transition: .1s;
 }
 
-section.build ul li input[type=submit]:hover {
+section.build ul.loggedoff li input[type=submit]:hover {
     background-color: var(--blue-hover);
 }
 
 
 
 footer {
+    min-width: 100%;
     padding: 8px 10px;
     word-wrap: wrap;
     text-align: center;
@@ -188,7 +198,10 @@ footer {
     font-family: var(--font-serif);
     font-size: 10px;
     
-    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.253);
+    /*box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.253);*/
+    border-top: 1px solid var(--background_input_hover);
+    background-color: var(--background_input);
+
 }
 
 footer span {

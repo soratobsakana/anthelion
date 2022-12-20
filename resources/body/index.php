@@ -13,7 +13,7 @@
                             <h1> Anthelion </h1>
                         </div>
                         <form action="index.php" method="post">
-                        <ul>
+                        <ul class="loggedoff">
                             <li><input type="submit" name="login" value="Login"></li>
                             <li><input type="submit" name="register" value="Register"></li>
                         </ul>
