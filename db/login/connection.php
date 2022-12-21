@@ -1,7 +1,7 @@
 <?php
     $dbHost = 'localhost';
     $dbUser = 'root';
-    $dbPwd = 'a1YZOIWf5wOB';
+    $dbPwd = ''; // a1YZOIWf5wOB
     $dbName = 'anthelion';
 
     $con = mysqli_connect($dbHost, $dbUser, $dbPwd, $dbName);

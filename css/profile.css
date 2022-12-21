@@ -1,3 +1,8 @@
+input[type="submit"] {
+    padding: 3px 15px;
+    font-size: 14px;
+}
+
 section.profile-wrapper {
     height: 100%;
     width: 100%;
@@ -39,6 +44,8 @@ div.profile-user_info-data {
 
 div.profile-user_info-data-fr {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 div.profile-user_info-data-fr h1 {

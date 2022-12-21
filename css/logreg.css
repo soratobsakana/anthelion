@@ -22,26 +22,18 @@
     gap: 15px;
 }
 
-.login-register-form input {
+input, textarea {
     border-radius: 8px;
     padding: 10px;
     background-color: var(--background_input);
     border: 1px solid var(--blue);
     color: var(--text);
+
+    resize: none;
 }
 
 input[type="submit"] {
-    padding: 5px 25px;
-    background-color: var(--blue);
-    border-radius: 20px;
-
     margin: 5px auto;
-
-    transition: .1s;
-}
-
-input[type="submit"]:hover {
-    background-color: var(--blue-hover);
 }
 
 .login-register  p {

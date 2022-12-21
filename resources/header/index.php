@@ -16,7 +16,7 @@
                     <?php
                 } else {
                     ?>
-                    <li><a href="/resources/profile"><i class="fas fa-user"></i><span id="header-res"><?=$_SESSION['name']?></span></a></li>
+                    <li><a href="/"><i class="fas fa-user"></i><span id="header-res"><?=$_SESSION['name']?></span></a></li>
                     <?php
                 }
             ?>

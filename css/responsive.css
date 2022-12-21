@@ -37,6 +37,7 @@
     }
     .profile-user_desc {
         display: block!important;
+        padding-top: 20px!important;
     }
     .profile-user_sections ul {
         grid-template-columns: 1fr 1fr 1fr!important;
@@ -54,4 +55,28 @@
         grid-template-columns: 1fr 1fr!important;
         font-size: 12px;
     }
+}
+
+@media (max-width: 480px) {
+    .profile-user_info-data-sr ul{
+        flex-direction: column!important;
+    }
+    .li-separator_dot {
+        display: none;
+    }
+    #profile_edit {
+        font-size: 12px!important;
+    }
+}
+
+@media (max-width: 440px) {
+    .profile-edit {
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 340px) {
+    .login-register {
+        width: 100%!important;
+    }  
 }

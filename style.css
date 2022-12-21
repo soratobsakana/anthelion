@@ -40,12 +40,20 @@ a {
 }
 
 input[type=submit] {
-    background-color: inherit;
+    background-color: var(--blue);
     border-radius: none;
     border: none;
     font-size: inherit;
     color: inherit;
     cursor: pointer;
+
+    padding: 5px 25px;
+    border-radius: 20px;
+    transition: .1s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--blue-hover);
 }
 
 .highlight {
