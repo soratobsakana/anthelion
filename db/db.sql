@@ -4,6 +4,14 @@ CREATE TABLE `accounts` (
   	`username` varchar(16) NOT NULL,
   	`password` varchar(255) NOT NULL,
   	`email` varchar(100) NOT NULL,
+    `joined_at` datetime default current_timestamp,
+    `country` varchar(30),
+    `biography` varchar(240),
+    `twitter` varchar(15),
+    `instagram` varchar(30),
+    `github` varchar(39),
+    `discord` varchar(39),
+    `website` varchar(200),
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -15,8 +23,11 @@ CREATE TABLE `users` (
   `username` varchar(16) UNIQUE NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) UNIQUE NOT NULL,
-  `birthday` date null,
-  `created_at` datetime default current_timestamp,
+  `joined_at` datetime default current_timestamp,
+  `country` varchar(30),
+  `biography` varchar(240),
+  
+
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 

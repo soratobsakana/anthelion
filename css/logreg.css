@@ -32,8 +32,9 @@ input, textarea {
     resize: none;
 }
 
-input[type="submit"] {
+.login-register input[type="submit"] {
     margin: 5px auto;
+    padding: 5px 35px!important;
 }
 
 .login-register  p {

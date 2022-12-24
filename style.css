@@ -52,8 +52,19 @@ input[type=submit] {
     transition: .1s;
 }
 
+textarea, input {
+    font-family: inherit;
+    font-size: 12px;
+}
+
 input[type="submit"]:hover {
     background-color: var(--blue-hover);
+}
+
+label {
+    font-size: 12px;
+    color:rgb(109, 109, 109);
+
 }
 
 .highlight {
@@ -70,12 +81,13 @@ body {
 }
 
 div.container {
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 
@@ -83,6 +95,8 @@ header.header-wrapper {
     border-bottom: 1px solid var(--background_input_hover);
     background-color: var(--background_input);
     min-width: 100%;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
 header.inner-header {
@@ -157,8 +171,8 @@ section.build {
 }
 
 section.build div.build-wrapper {
-    /* This only is used for the loggedout homepage. */
-    height: 100%;
+    /* This is only used for the loggedout homepage. */
+    height: 86vh; /* Temp */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,7 +223,10 @@ footer {
     /*box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.253);*/
     border-top: 1px solid var(--background_input_hover);
     background-color: var(--background_input);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 
+    position: absolute;
+    bottom: 0;
 }
 
 footer span {

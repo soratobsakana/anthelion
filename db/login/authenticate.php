@@ -43,5 +43,5 @@
         $stmt -> close();
     }
 
-    echo "<br><br><a href='index.html'>Comeback</a>";
+    echo "<br><br><a href='/'>Comeback</a>";
 ?>

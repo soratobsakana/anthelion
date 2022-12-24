@@ -28,7 +28,16 @@
 
 }
 
+@media (max-width: 867px) {
+    .profile-user_info-data-sr {
+        gap: 3px!important; /* Well this tries to predict when a biography of 240 chars goes up to 3 rows of space */
+    }
+}
+
 @media (max-width: 680px) {
+    .profile-user_info-data-sr {
+        gap: 5px!important;
+    }
     header.inner-header ul.header-menu {
         display: none;
     }
@@ -61,6 +70,10 @@
     .profile-user_info-data-sr ul{
         flex-direction: column!important;
     }
+    .profile-user_info-data-sr ul.profile-user_info-data-sr-links{
+        flex-direction: row!important;
+        flex-wrap: wrap;
+    }
     .li-separator_dot {
         display: none;
     }
@@ -79,4 +92,11 @@
     .login-register {
         width: 100%!important;
     }  
+}
+
+@media (max-width: 300px) {
+    #profile_edit {
+        font-size: 10px!important;
+        padding: 3px 8px;
+    }
 }

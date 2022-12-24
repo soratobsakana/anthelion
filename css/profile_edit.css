@@ -1,3 +1,6 @@
+/* Design of this is probably shit */
+
+
 div.profile-edit {
     padding: 40px 15px;
     width: 400px;
@@ -18,11 +21,36 @@ div.profile-edit form {
     gap: 15px;
 }
 
-div.profile-edit input[type="submit"] {
-    margin-bottom: 0px!important;
+div.profile-edit form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--background_input);
+    border: 1px solid var(--background_input_hover);
 }
 
-h1 {
+div.profile-edit form div:focus-within{
+    border-color: var(--blue);
+}
+
+div.profile-edit form div input, textarea {
+    border-radius: 0px!important;
+    padding: 0px!important;
+    background-color: transparent!important;
+    border: none!important;
+
+    outline: none;
+}
+
+div.profile-edit input[type="submit"] {
+    margin: 5px auto 0px!important;
+    padding: 5px 35px!important;
+}
+
+div.profile-edit h1 {
     margin-bottom: 20px;
     padding-bottom: 3px;
     text-align: center;

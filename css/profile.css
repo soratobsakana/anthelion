@@ -1,5 +1,7 @@
-input[type="submit"] {
+div.profile-user_info-data-fr input[type="submit"] {
     padding: 3px 15px;
+    margin-top: 0px!important;
+    margin-bottom: 0px !important;
     font-size: 14px;
 }
 
@@ -77,6 +79,11 @@ div.profile-user_info-data-sr p {
 
     max-width: 100%;
     word-wrap: break-word;
+}
+
+ul.profile-user_info-data-sr-links {
+    display: flex;
+    gap: 7px!important;
 }
 
 div.profile-user_desc {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../css/logreg.css">
     <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="shortcut icon" href="/assets/anthelion/favico.png" type="image/x-icon">
     <title>Login - Anthelion</title>
 </head>
 <body>
