@@ -4,7 +4,6 @@
         exit;
     } else {
         include "db/login/connection.php";
-
        
         $query = "select * from accounts where id='".$_SESSION["id"]."';";
         $user_data = mysqli_query($con, $query);
@@ -21,6 +20,8 @@
                 $github = $row["github"];
                 $discord = $row["discord"];
                 $website = $row["website"];
+
+
             }
         } else {
             echo "There is not an user with that username in the database.";

@@ -2,7 +2,7 @@
 
 
 div.profile-edit {
-    padding: 40px 15px;
+    padding: 0px 15px;
     width: 400px;
 
     /* This will go later when this is placed on top of the profile instead of beign a different file.
@@ -18,7 +18,7 @@ div.profile-edit {
 div.profile-edit form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 div.profile-edit form div {
@@ -46,7 +46,7 @@ div.profile-edit form div input, textarea {
 }
 
 div.profile-edit input[type="submit"] {
-    margin: 5px auto 0px!important;
+    margin: 15px auto 0px!important;
     padding: 5px 35px!important;
 }
 

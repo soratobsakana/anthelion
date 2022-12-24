@@ -57,17 +57,28 @@
         echo "<br><br><a href='/'>Comeback</a>";
     } else {
 
-        if ($stmt_account = $con->prepare('INSERT INTO accounts (username, password, email, country, biography) VALUES (?, ?, ?, ?, ?)')) {
+        if ($stmt_account = $con->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {
             // Using password_hash here implies that password_verify will be used in the login process.
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $stmt_account->bind_param('sssss', $_POST['username'], $password, $_POST['email'], $_POST["country"], $_POST["biography"]);
+            $stmt_account->bind_param('sss', $_POST['username'], $password, $_POST['email']);
             $stmt_account->execute();
             
             // Auto-login
+            if ($stmt = $con -> prepare('SELECT id FROM accounts WHERE username = ?')) {
+            // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s".
+            $stmt -> bind_param('s', $_POST["username"]);
+            $stmt -> execute();
+
+            // Store the result so we can check if the account exists in the database.
+            $stmt -> store_result();
+            $stmt -> bind_result($id);
+            $stmt -> fetch();
+            }
             session_start();
             session_regenerate_id();
             $_SESSION["loggedin"] = TRUE;
             $_SESSION["name"] = $_POST["username"];
+            $_SESSION["id"] = $id;
 
             header('Location: /');
 
