@@ -12,6 +12,7 @@ CREATE TABLE `accounts` (
     `github` varchar(39),
     `discord` varchar(39),
     `website` varchar(200),
+    `pfp` varchar(100) not null default '/assets/anthelion/default.png',
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 

@@ -22,7 +22,7 @@
     --text: #ffffff;
     --font: "inter";
     --font-serif: "Libre Baskerville";
-    --label: #ffffff;
+    --label: #6d6d6d;
     --label-font-size: 14px;
     font-size: 15px;
 }
@@ -50,6 +50,7 @@ input[type=submit] {
     padding: 5px 25px;
     border-radius: 20px;
     transition: .1s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
 textarea, input {
@@ -63,7 +64,7 @@ input[type="submit"]:hover {
 
 label {
     font-size: 12px;
-    color:rgb(109, 109, 109);
+    color: var(--label)!important;
 
 }
 

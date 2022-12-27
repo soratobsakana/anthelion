@@ -15,6 +15,7 @@
     <title>Login - Anthelion</title>
 </head>
 <body>
+    <script>0</script>
     <div class="container">
         <?php include "../../resources/header/index.php" ?>
 

@@ -2,7 +2,6 @@
 
 
 div.profile-edit {
-    padding: 0px 15px;
     width: 400px;
 
     /* This will go later when this is placed on top of the profile instead of beign a different file.
@@ -13,6 +12,10 @@ div.profile-edit {
 
     border-radius: 8px;
     margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 div.profile-edit form {
@@ -51,9 +54,45 @@ div.profile-edit input[type="submit"] {
 }
 
 div.profile-edit h1 {
-    margin-bottom: 20px;
-    padding-bottom: 3px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 30px;
     font-weight: 900;
+}
+
+/* First row: pfp editing */
+div.profile-edit-user {
+    background-color: transparent!important;
+    border: none!important;
+    padding: 0px!important;
+}
+
+div.profile-edit label.profile-edit-pfp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 10px;
+    background-color: var(--background_input);
+    border: 1px solid var(--background_input_hover);
+    border-radius: 8px;
+
+    transition: .1s;
+}
+
+div.profile-edit label.profile-edit-pfp:hover {
+    background-color: var(--background_input_hover);
+}
+
+div.profile-edit input[type='file'] {
+    display: none;
+}
+
+div.profile-edit div.profile-edit-user i {
+    color: var(--label);
+}
+
+div.profile-edit label{
+    color: white;
+    cursor: pointer;
 }

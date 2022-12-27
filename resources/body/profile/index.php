@@ -20,8 +20,7 @@
                 $github = $row["github"];
                 $discord = $row["discord"];
                 $website = $row["website"];
-
-
+                $pfp = $row["pfp"];
             }
         } else {
             echo "There is not an user with that username in the database.";
@@ -33,10 +32,18 @@
             ?>     
             <div class="profile-edit">
                 <h1>Edit profile</h1>
-                <form action="resources/body/profile/edit.php" method="post">
+                <form enctype="multipart/form-data" action="resources/body/profile/edit.php" method="post">
+                    <div class="profile-edit-user">
+                        <label for="profile-edit-pfp" class="profile-edit-pfp">
+                            Change profile picture.
+                            <i class="fas fa-edit"></i>
+                        </label>
+                        <input type="file" name="userfile" id="profile-edit-pfp">
+                        
+                    </div>
                     <div>
                         <label for="username-edit">Username </label>
-                        <input type="text" name="username-edit" value="<?=$username?>" id="">
+                        <input type="text" name="username-edit" value="nabuna" id="">
                     </div>
                     <div>
                         <label for="country-edit">Country </label>
@@ -77,9 +84,7 @@
             ?>
         <section class="profile-wrapper">
             <div class="profile-user_info">
-                <div class="profile-user_info-img">
-                    <img src="assets/anthelion/default.png" alt="<?=$_SESSION["name"]?>'s profile picture.">
-                </div>
+                <div style="background-image: url(<?=$pfp?>)" class="profile-user_info-img"></div>
                 <div class="profile-user_info-data">
                     <div class="profile-user_info-data-fr">
                         <h2><?=$_SESSION["name"]?></h2>

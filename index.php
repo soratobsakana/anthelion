@@ -17,12 +17,18 @@
      <title>Anthelion</title>
 </head>
 <body>
+    <script>0</script>
     <div class="container">
         <?php
             session_start();
-            include "resources/header/index.php";
-            include "resources/body/index.php";
-            include "resources/footer/index.php";
+            if (!isset($_POST["tool"])) {
+                include "resources/header/index.php";
+                include "resources/body/index.php";
+                include "resources/footer/index.php";
+            } else {
+                include "tools";
+            }
+            
         ?>
     </div>
 </body>

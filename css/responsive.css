@@ -86,6 +86,10 @@
     .profile-edit {
         width: 100%!important;
     }
+
+    .profile-edit form div {
+        width: 100%!important;
+    }
 }
 
 @media (max-width: 340px) {
