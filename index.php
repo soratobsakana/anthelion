@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/profile_edit.css">
+    <link rel="stylesheet" href="css/tools_edit.css">
     <link rel="stylesheet" href="css/logreg.css">
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -21,14 +22,9 @@
     <div class="container">
         <?php
             session_start();
-            if (!isset($_POST["tool"])) {
-                include "resources/header/index.php";
-                include "resources/body/index.php";
-                include "resources/footer/index.php";
-            } else {
-                include "tools";
-            }
-            
+            include "resources/header/index.php";
+            include "resources/body/index.php";
+            include "resources/footer/index.php"; 
         ?>
     </div>
 </body>

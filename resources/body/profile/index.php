@@ -41,35 +41,42 @@
                         <input type="file" name="userfile" id="profile-edit-pfp">
                         
                     </div>
-                    <div>
-                        <label for="username-edit">Username </label>
-                        <input type="text" name="username-edit" value="nabuna" id="">
+                    <div class="profile-edit-wrapper">
+                        <div class="profile-edit-input-wrapper">
+                            <label for="username-edit">Username </label>
+                            <input type="text" name="username-edit" value="<?=$username?>" id="">
+                        </div>
+                        <div class="profile-edit-input-wrapper">
+                            <label for="country-edit">Country </label>
+                            <input type="text" name="country-edit" value="<?=$country?>" id="">
+                        </div>
                     </div>
-                    <div>
-                        <label for="country-edit">Country </label>
-                        <input type="text" name="country-edit" value="<?=$country?>" id="">
-                    </div>
-                    <div>
+
+                    <div class="profile-edit-input-wrapper">
                         <label for="biography-edit">Biography </label>
                         <textarea name="biography-edit" id="" rows="5"><?=$biography?></textarea>
                     </div>
-                    <div>
-                        <label for="twitter-edit">Twitter </label>
-                        <input type="text" name="twitter-edit" value="<?=$twitter?>" id="">
+
+                    <div class="profile-edit-wrapper">
+                        <div class="profile-edit-input-wrapper">
+                            <label for="twitter-edit">Twitter </label>
+                            <input type="text" name="twitter-edit" value="<?=$twitter?>" id="">
+                        </div>
+                        <div class="profile-edit-input-wrapper">
+                            <label for="website-edit">Website </label>
+                            <input type="text" name="website-edit" value="<?=$website?>" id="">
+                        </div>
+                        <div class="profile-edit-input-wrapper">
+                            <label for="instagram-edit">Instagram </label>
+                            <input type="text" name="instagram-edit" value="<?=$instagram?>" id="">
+                        </div>
+                        <div class="profile-edit-input-wrapper">
+                            <label for="github-edit">GitHub </label>
+                            <input type="text" name="github-edit" value="<?=$github?>" id="">
+                        </div>
                     </div>
-                    <div>
-                        <label for="website-edit">Website </label>
-                        <input type="text" name="website-edit" value="<?=$website?>" id="">
-                    </div>
-                    <div>
-                        <label for="instagram-edit">Instagram </label>
-                        <input type="text" name="instagram-edit" value="<?=$instagram?>" id="">
-                    </div>
-                    <div>
-                        <label for="github-edit">GitHub </label>
-                        <input type="text" name="github-edit" value="<?=$github?>" id="">
-                    </div>
-                    <div>
+
+                    <div class="profile-edit-input-wrapper">
                         <label for="email-edit">Email </label>
                         <input type="text" name="email-edit" value="<?=$email?>" id="">
                     </div>
@@ -78,6 +85,40 @@
                     
                     <input type="submit" name="send" value="Save">
                 </form>
+            </div>
+            <?php
+        } elseif (isset($_POST["tools-edit"])){
+            ?>
+            <div class="tools-edit-wrapper">
+                <h1>Customize your tools</h1>
+                <form action="index.php" method="get">
+                    <?php
+
+                    $tools = ["Images", "Music", "Notes", "Calendar", "Contact", "Anime", "Manga", "Links", "Typing", "Portfolio", "Documentation", "Bookmarks"];
+
+                    foreach ($tools as $tool) {
+                        print "<div class='tools-edit-input-wrapper'>";
+                        print "<input type='checkbox' name='tools[]' value='$tool' id=''>";
+                        print "<label>$tool</label>";
+                        print "</div>";
+                    }
+
+                    foreach ($tools as $tool) {
+                        
+                        print "<label class='tools-edit-label' for='tools[]'>";
+                        print "<input type='checkbox' name='tools[]' value='$tool'>";
+                        print "<span class='test'></span>";
+                    print "$tool</label>";
+                        
+                    }
+
+                ?>
+                    <input type="submit" value="Save" name="tools-edit-save">
+                </form>
+                
+
+                
+
             </div>
             <?php
         } else {
@@ -108,19 +149,15 @@
                             <?php
                             if (!empty($twitter)) {
                                 print "<li><i class='fab fa-twitter'></i> <span class='highlight'><b><a href='$twitter' target='a_blank'>Twitter</a></span></b></li>";
-                                // print "<li class='li-separator_dot'>•</li>";
                             } 
                             if (!empty($website)) {
                                 print "<li><i class='fas fa-link'></i> <span class='highlight'><b><a href='$website' target='a_blank'>Website</a></span></b></li>";
-                                // print "<li class='li-separator_dot'>•</li>";
                             } 
                             if (!empty($instagram)) {
                                 print "<li><i class='fab fa-instagram'></i> <span class='highlight'><b><a href='$instagram' target='a_blank'>Instagram</a></span></b></li>";
-                                // print "<li class='li-separator_dot'>•</li>";
                             }
                             if (!empty($github)) {
                                 print "<li><i class='fab fa-github'></i> <span class='highlight'><b><a href='$github' target='a_blank'>GitHub</a></span></b></li>";
-                                // print "<li class='li-separator_dot'>•</li>";
                             }
                             ?>
                         </ul>
@@ -142,22 +179,14 @@
                 }
             ?>
             
-            <div class="profile-user_sections">
-                <ul>
-                    <li>Images</li>
-                    <li>Music</li>
-                    <li>Notes</li>
-                    <li>Calendar</li>
-                    <li>Contact</li>
-                    <li>Anime</li>
-                    <li>Manga</li>
-                    <li>Links</li>
-                    <li>Typing</li>
-                    <li>Portfolio</li>
-                    <li>Documentation</li>
-                    <li>Bookmarks</li>
-                </ul>
+            <div class="profile-user_tools">
+                <?php include "resources/body/tools/index.php"; ?>
             </div>
+
+            <form class="tools-edit-form" action="index.php" method="post">
+                <input type="submit" class="tools-edit" value="You can add tools and customize them by clicking here!" name="tools-edit">
+            </form>
+            
         </section>
         <?php
         }

@@ -2,7 +2,7 @@
 
 
 div.profile-edit {
-    width: 400px;
+    width: 450px;
 
     /* This will go later when this is placed on top of the profile instead of beign a different file.
     background-color: var(--background_input);
@@ -21,10 +21,16 @@ div.profile-edit {
 div.profile-edit form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
-div.profile-edit form div {
+div.profile-edit form div.profile-edit-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+div.profile-edit-input-wrapper {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -59,6 +65,8 @@ div.profile-edit h1 {
     font-size: 30px;
     font-weight: 900;
 }
+
+
 
 /* First row: pfp editing */
 div.profile-edit-user {

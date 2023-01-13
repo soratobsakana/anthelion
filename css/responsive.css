@@ -48,7 +48,7 @@
         display: block!important;
         padding-top: 20px!important;
     }
-    .profile-user_sections ul {
+    .profile-user_tools ul {
         grid-template-columns: 1fr 1fr 1fr!important;
     }
     footer {
@@ -60,13 +60,13 @@
     #header-res {
         display: none;
     }
-    .profile-user_sections ul {
+    .profile-user_tools ul {
         grid-template-columns: 1fr 1fr!important;
         font-size: 12px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
     .profile-user_info-data-sr ul{
         flex-direction: column!important;
     }
@@ -80,9 +80,9 @@
     #profile_edit {
         font-size: 12px!important;
     }
-}
-
-@media (max-width: 440px) {
+    div.profile-edit form div.profile-edit-wrapper {
+        grid-template-columns: 1fr!important;
+    }
     .profile-edit {
         width: 100%!important;
     }

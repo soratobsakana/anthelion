@@ -27,8 +27,6 @@ CREATE TABLE `users` (
   `joined_at` datetime default current_timestamp,
   `country` varchar(30),
   `biography` varchar(240),
-  
-
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -48,8 +46,14 @@ CREATE TABLE users_images (
   FOREIGN KEY(image_id) REFERENCES images(image_id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-
-
+-- Bookmarks table -
+CREATE TABLE bookmarks (
+  `bookmark_id` int(11),
+  `title` varchar(150),
+  `description` text,
+  `link` varchar(500) not null default '/',
+  primary key (bookmark_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 

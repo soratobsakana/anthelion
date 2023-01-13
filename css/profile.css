@@ -104,17 +104,17 @@ div.profile-separator {
     box-shadow: 0px 0px 8px var(--blue);
 }
 
-div.profile-user_sections {
+div.profile-user_tools {
     padding: 20px 0;
 }
 
-div.profile-user_sections ul{
+div.profile-user_tools ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 6px;
 }
 
-div.profile-user_sections ul li {
+div.profile-user_tools ul li {
     border-radius: 8px;
     padding: 8px 15px;
     background-color: var(--background_input);
@@ -127,11 +127,27 @@ div.profile-user_sections ul li {
     cursor: pointer;
 }
 
-div.profile-user_sections ul li:hover {
+div.profile-user_tools ul li:hover {
     transition: .05s;
     background-color: var(--background_input_hover);
+    
 }
 
-div.profile-user_sections ul li.profile-user_sections-create-entry {
-    background-color: transparent;
+div.profile-user_tools li.profile-user_tools-add {
+    background-color: var(--blue);
+    border-radius: 30px;
+    color: var(--background);
+}
+
+div.profile-user_tools li.profile-user_tools-add:hover {
+    opacity: 100;
+    background-color: var(--background_input);
+}
+
+#no-tools {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+
+    color: var(--label);
 }
